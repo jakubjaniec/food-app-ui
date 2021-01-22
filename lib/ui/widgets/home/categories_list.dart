@@ -19,7 +19,7 @@ class CategoriesList extends StatelessWidget {
 
     return Container(
       margin: EdgeInsets.symmetric(vertical: height * 0.05),
-      height: 150,
+      height: height * 0.11,
       child: ListView(
         scrollDirection: Axis.horizontal,
         padding: EdgeInsets.only(left: width * 0.07),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_app_ui/ui/widgets/home/categories_list.dart';
 import 'package:food_app_ui/ui/widgets/home/header.dart';
+import 'package:food_app_ui/ui/widgets/home/restaurants_list.dart';
 import 'package:food_app_ui/utils/theme.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -14,7 +15,7 @@ class HomeScreen extends StatelessWidget {
       backgroundColor: colors.custom,
       body: SafeArea(
         child: Container(
-          // padding: EdgeInsets.only(left: width * 0.07),
+          padding: EdgeInsets.only(top: height * 0.01),
           height: height,
           width: width,
           color: colors.custom,
@@ -22,6 +23,7 @@ class HomeScreen extends StatelessWidget {
             children: [
               Header(),
               CategoriesList(),
+              Expanded(child: RestaurantsList()),
             ],
           ),
         ),
