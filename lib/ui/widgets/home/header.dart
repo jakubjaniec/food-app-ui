@@ -9,7 +9,7 @@ class Header extends StatelessWidget {
     var width = MediaQuery.of(context).size.width;
 
     return Container(
-      padding: EdgeInsets.only(left: width * 0.06),
+      padding: EdgeInsets.only(left: width * 0.05),
       child: Row(
         children: [
           Icon(Icons.place,

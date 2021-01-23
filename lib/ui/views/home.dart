@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app_ui/ui/widgets/home/bottom_navigation.dart';
 import 'package:food_app_ui/ui/widgets/home/categories_list.dart';
 import 'package:food_app_ui/ui/widgets/home/header.dart';
 import 'package:food_app_ui/ui/widgets/home/restaurants_list.dart';
@@ -28,6 +29,7 @@ class HomeScreen extends StatelessWidget {
           ),
         ),
       ),
+      bottomNavigationBar: BottomNavigation(),
     );
   }
 }

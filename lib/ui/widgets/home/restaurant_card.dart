@@ -18,7 +18,7 @@ class RestaurantCard extends StatelessWidget {
         fontSize: AdaptiveTextSize().getadaptiveTextSize(context, 14.0));
 
     return Container(
-      margin: EdgeInsets.only(top: height * 0.04),
+      margin: EdgeInsets.only(bottom: height * 0.04),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15.0),
       ),

@@ -3,15 +3,6 @@ import 'package:food_app_ui/ui/widgets/home/category.dart';
 // import 'package:food_app_ui/utils/theme.dart';
 
 class CategoriesList extends StatelessWidget {
-  final categories = [
-    'Burgers',
-    'Pizza',
-    'Beverages',
-    'Asian',
-    'Chinese',
-    'Seafood'
-  ];
-
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
@@ -22,7 +13,7 @@ class CategoriesList extends StatelessWidget {
       height: height * 0.11,
       child: ListView(
         scrollDirection: Axis.horizontal,
-        padding: EdgeInsets.only(left: width * 0.07),
+        padding: EdgeInsets.only(left: width * 0.06),
         children: [
           Category(text: 'Burgers', isActive: true),
           Category(text: 'Pizza', isActive: false),

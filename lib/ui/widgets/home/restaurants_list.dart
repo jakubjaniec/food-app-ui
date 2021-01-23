@@ -6,9 +6,10 @@ class RestaurantsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
+    var height = MediaQuery.of(context).size.height;
 
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: width * 0.07),
+      padding: EdgeInsets.symmetric(horizontal: width * 0.06),
       child: Column(
         children: [
           Container(
@@ -31,6 +32,7 @@ class RestaurantsList extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(height: height * 0.04),
           Container(
             child: Expanded(
               child: ListView(
