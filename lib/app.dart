@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
-import 'package:food_app_ui/ui/views/home.dart';
+// import 'package:food_app_ui/ui/views/home.dart';
+import 'package:food_app_ui/ui/views/login.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -9,7 +10,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       locale: DevicePreview.locale(context),
       builder: DevicePreview.appBuilder,
-      home: HomeScreen(),
+      home: LoginScreen(),
     );
   }
 }

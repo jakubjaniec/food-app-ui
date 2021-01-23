@@ -26,6 +26,7 @@ dependencies:
   bubbled_navigation_bar: ^0.0.4
   cupertino_icons: ^1.0.0
   device_preview: ^0.5.5
+  font_awesome_flutter: ^8.11.0
   hexcolor: ^1.0.6
 
 dev_dependencies:
