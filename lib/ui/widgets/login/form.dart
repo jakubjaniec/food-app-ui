@@ -4,26 +4,26 @@ import 'package:food_app_ui/utils/theme.dart';
 class LoginForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
-    var width = MediaQuery.of(context).size.width;
+    final Size size = MediaQuery.of(context).size;
+    final CustomTheme theme = CustomTheme();
 
-    TextStyle labelStyle = TextStyle(
-      color: Colors.white,
+    final TextStyle labelStyle = TextStyle(
+      color: theme.creamy,
       fontWeight: FontWeight.w700,
       letterSpacing: 1.15,
-      fontSize: AdaptiveTextSize().getadaptiveTextSize(context, 16),
+      fontSize: theme.getAdaptiveTextSize(context, 16),
     );
 
-    TextStyle inputTextStyle = TextStyle(
-      color: Colors.white,
-      fontSize: AdaptiveTextSize().getadaptiveTextSize(context, 17),
+    final TextStyle inputTextStyle = TextStyle(
+      color: theme.creamy,
+      fontSize: theme.getAdaptiveTextSize(context, 17),
     );
 
-    InputDecoration inputDecoration = InputDecoration(
-      fillColor: ThemeColors().purple,
+    final InputDecoration inputDecoration = InputDecoration(
+      fillColor: theme.purple,
       filled: true,
       contentPadding: EdgeInsets.symmetric(
-          horizontal: width * 0.05, vertical: height * 0.02),
+          horizontal: size.width * 0.05, vertical: size.height * 0.02),
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(20.0),
       ),
@@ -33,14 +33,14 @@ class LoginForm extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text('Email', style: labelStyle),
-        SizedBox(height: height * 0.02),
+        SizedBox(height: size.height * 0.02),
         TextField(
           style: inputTextStyle,
           decoration: inputDecoration,
         ),
-        SizedBox(height: height * 0.04),
+        SizedBox(height: size.height * 0.04),
         Text('Password', style: labelStyle),
-        SizedBox(height: height * 0.02),
+        SizedBox(height: size.height * 0.02),
         TextField(
           obscureText: true,
           style: inputTextStyle,

@@ -8,8 +8,8 @@ void main() {
   runApp(
     DevicePreview(
       enabled: !kReleaseMode,
-      plugins: [
-        const ScreenshotPlugin(),
+      plugins: const [
+        ScreenshotPlugin(),
       ],
       builder: (context) => MyApp(),
     ),

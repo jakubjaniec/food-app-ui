@@ -4,22 +4,25 @@ import 'package:food_app_ui/utils/theme.dart';
 class Header extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final CustomTheme theme = CustomTheme();
+
     return Column(
       children: [
         Text(
           'Login',
           style: TextStyle(
-            color: Colors.white,
+            color: theme.creamy,
             fontWeight: FontWeight.w700,
-            fontSize: AdaptiveTextSize().getadaptiveTextSize(context, 40),
+            fontSize: theme.getAdaptiveTextSize(context, 40),
           ),
         ),
         Text(
           'Access account',
           style: TextStyle(
-              color: ThemeColors().greyish,
-              // fontWeight: FontWeight.w100,
-              fontSize: AdaptiveTextSize().getadaptiveTextSize(context, 16)),
+            color: theme.blueGrey,
+            // fontWeight: FontWeight.w100,
+            fontSize: theme.getAdaptiveTextSize(context, 16),
+          ),
         )
       ],
     );

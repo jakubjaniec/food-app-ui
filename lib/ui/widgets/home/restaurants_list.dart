@@ -5,40 +5,40 @@ import 'package:food_app_ui/utils/theme.dart';
 class RestaurantsList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var width = MediaQuery.of(context).size.width;
-    var height = MediaQuery.of(context).size.height;
+    final Size size = MediaQuery.of(context).size;
+    final CustomTheme theme = CustomTheme();
 
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: width * 0.06),
+      padding: EdgeInsets.symmetric(horizontal: size.width * 0.06),
       child: Column(
         children: [
-          Container(
+          SizedBox(
             height: 50,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text('Popular Restaurants',
                     style: TextStyle(
-                      color: ThemeColors().greyish,
+                      color: theme.blueGrey,
                       fontWeight: FontWeight.w700,
-                      fontSize:
-                          AdaptiveTextSize().getadaptiveTextSize(context, 20.0),
+                      fontSize: theme.getAdaptiveTextSize(context, 20.0),
                     )),
                 Icon(
                   Icons.filter_list,
-                  color: ThemeColors().greyish,
-                  size: AdaptiveTextSize().getadaptiveTextSize(context, 27.0),
+                  color: theme.blueGrey,
+                  size: theme.getAdaptiveTextSize(context, 27.0),
                 ),
               ],
             ),
           ),
-          SizedBox(height: height * 0.04),
+          SizedBox(height: size.height * 0.04),
+          // ignore: avoid_unnecessary_containers
           Container(
             child: Expanded(
               child: ListView(
-                children: [
+                children: const [
                   RestaurantCard(
-                      name: 'Domino\'s Pizza',
+                      name: "Domino's Pizza",
                       category: 'Pizza',
                       stars: 4.6,
                       eta: 15),
@@ -60,7 +60,7 @@ class RestaurantsList extends StatelessWidget {
                       stars: 4.4,
                       eta: 40),
                   RestaurantCard(
-                      name: 'Mc Donald\'s',
+                      name: "Mc Donald's",
                       category: 'Fastfood',
                       stars: 4.4,
                       eta: 25),

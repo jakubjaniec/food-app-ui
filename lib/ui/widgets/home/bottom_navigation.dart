@@ -11,31 +11,33 @@ class _BottomNavigationState extends State<BottomNavigation> {
 
   @override
   Widget build(BuildContext context) {
+    final CustomTheme theme = CustomTheme();
+
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
-      backgroundColor: ThemeColors().custom,
-      unselectedItemColor: ThemeColors().greyish,
+      backgroundColor: theme.background,
+      unselectedItemColor: theme.blueGrey,
       selectedItemColor: Colors.deepPurple[400],
       showUnselectedLabels: false,
       showSelectedLabels: false,
-      iconSize: AdaptiveTextSize().getadaptiveTextSize(context, 26),
+      iconSize: theme.getAdaptiveTextSize(context, 26),
       currentIndex: _currentIndex,
-      items: [
+      items: const [
         BottomNavigationBarItem(
           icon: Icon(Icons.home_filled),
-          label: "Home",
+          label: 'Home',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.search),
-          label: "Search",
+          label: 'Search',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.shopping_bag_outlined),
-          label: "Orders",
+          label: 'Orders',
         ),
         BottomNavigationBarItem(
           icon: Icon(Icons.person),
-          label: "Account",
+          label: 'Account',
         ),
       ],
       onTap: (value) {

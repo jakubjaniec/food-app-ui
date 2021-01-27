@@ -1,30 +1,28 @@
 import 'package:flutter/material.dart';
-import 'package:food_app_ui/ui/widgets/home/bottom_navigation.dart';
-import 'package:food_app_ui/ui/widgets/home/categories_list.dart';
-import 'package:food_app_ui/ui/widgets/home/header.dart';
-import 'package:food_app_ui/ui/widgets/home/restaurants_list.dart';
+import 'package:food_app_ui/ui/widgets/home/home_widgets.dart';
 import 'package:food_app_ui/utils/theme.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var colors = ThemeColors();
-    var height = MediaQuery.of(context).size.height;
-    var width = MediaQuery.of(context).size.width;
+    final CustomTheme theme = CustomTheme();
+    final Size size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: colors.custom,
+      backgroundColor: theme.background,
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.only(top: height * 0.01),
-          height: height,
-          width: width,
-          color: colors.custom,
+          padding: EdgeInsets.only(top: size.height * 0.01),
+          height: size.height,
+          width: size.width,
+          color: theme.background,
           child: Column(
             children: [
               Header(),
               CategoriesList(),
-              Expanded(child: RestaurantsList()),
+              Expanded(
+                child: RestaurantsList(),
+              ),
             ],
           ),
         ),

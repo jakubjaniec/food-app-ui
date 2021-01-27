@@ -5,37 +5,37 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 class SocialButtons extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var height = MediaQuery.of(context).size.height;
-    var width = MediaQuery.of(context).size.width;
+    final Size size = MediaQuery.of(context).size;
+    final CustomTheme theme = CustomTheme();
 
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
-          width: width / 2.5,
-          height: height * 0.07,
+          width: size.width / 2.5,
+          height: size.height * 0.07,
           decoration: BoxDecoration(
-            color: ThemeColors().purple,
+            color: theme.purple,
             borderRadius: BorderRadius.circular(15.0),
           ),
           child: IconButton(
-            iconSize: AdaptiveTextSize().getadaptiveTextSize(context, 22.0),
-            color: ThemeColors().red,
-            icon: FaIcon(FontAwesomeIcons.google),
+            iconSize: theme.getAdaptiveTextSize(context, 22.0),
+            color: theme.red,
+            icon: const FaIcon(FontAwesomeIcons.google),
             onPressed: () {},
           ),
         ),
         Container(
-          width: width / 2.5,
-          height: height * 0.07,
+          width: size.width / 2.5,
+          height: size.height * 0.07,
           decoration: BoxDecoration(
-            color: ThemeColors().purple,
+            color: theme.purple,
             borderRadius: BorderRadius.circular(15.0),
           ),
           child: IconButton(
-            iconSize: AdaptiveTextSize().getadaptiveTextSize(context, 22.0),
+            iconSize: theme.getAdaptiveTextSize(context, 22.0),
             color: Colors.blue[800],
-            icon: FaIcon(FontAwesomeIcons.facebookF),
+            icon: const FaIcon(FontAwesomeIcons.facebookF),
             onPressed: () {},
           ),
         ),
