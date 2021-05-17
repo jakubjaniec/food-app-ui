@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app_ui/ui/views/login.dart';
 import 'package:food_app_ui/utils/theme.dart';
 
 class BottomNavigation extends StatefulWidget {
@@ -43,6 +44,11 @@ class _BottomNavigationState extends State<BottomNavigation> {
       onTap: (value) {
         _currentIndex = value;
         setState(() {});
+
+        if (_currentIndex == 3) {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => LoginScreen()));
+        }
       },
     );
   }

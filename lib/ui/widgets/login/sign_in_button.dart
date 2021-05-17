@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app_ui/ui/views/home.dart';
 import 'package:food_app_ui/utils/theme.dart';
 
 class SignInButton extends StatelessWidget {
@@ -17,12 +18,17 @@ class SignInButton extends StatelessWidget {
     return SizedBox(
       width: size.width,
       height: size.height * 0.07,
-      child: RaisedButton(
-        onPressed: () {},
-        color: Colors.purple[900],
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(15.0),
+      child: ElevatedButton(
+        style: ElevatedButton.styleFrom(
+          primary: Colors.purple[900],
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(15.0),
+          ),
         ),
+        onPressed: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => HomeScreen()));
+        },
         child: Text('Sign In', style: buttonTextStyle),
       ),
     );

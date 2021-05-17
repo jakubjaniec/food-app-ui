@@ -21,11 +21,11 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  cupertino_icons: ^1.0.3
+  device_preview: ^0.7.1
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.0
-  device_preview: ^0.5.5
-  font_awesome_flutter: ^8.11.0
+  font_awesome_flutter: ^9.0.0
   hexcolor: ^1.0.6
 
 dev_dependencies:
